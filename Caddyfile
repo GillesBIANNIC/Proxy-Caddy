@@ -1,0 +1,26 @@
+www.gillesbiannic.fr {
+    tls {$PROXY_TLS_MAIL}
+    proxy / portfolio:80
+}
+
+www.gillesbiannic.ovh {
+    redir https://www.gillesbiannic.fr{uri}
+}
+
+gillesbiannic.fr {
+    redir https://www.gillesbiannic.fr{uri}
+}
+
+gillesbiannic.ovh {
+    redir https://www.gillesbiannic.fr{uri}
+}
+
+deluge.gillesbiannic.fr {
+    tls {$PROXY_TLS_MAIL}
+    proxy / deluge:8112
+}
+
+kraken.gillesbiannic.fr {
+    tls {$PROXY_TLS_MAIL}
+    proxy / kraken:80
+}
